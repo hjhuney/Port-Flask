@@ -5,7 +5,7 @@ Notes and work from Jose Portillo's Flask course.
 ## Table of Contents
 
 Section 1: [Setting Everything Up](https://github.com/hjhuney/Port-Flask/blob/master/README.md#setting-everything-up)<br>
-Section 7: [Flask Basics]()<br>
+Section 7: [Flask Basics](https://github.com/hjhuney/Port-Flask/blob/master/README.md#flask-basics)<br>
 
 # Setting Everything Up
 
