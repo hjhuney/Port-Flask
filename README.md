@@ -1,6 +1,12 @@
-# Port-Flask
+# Jose Portillo Flask Course
 
 Notes and work from Jose Portillo's Flask course. 
+
+## Table of Contents
+
+Section 1: [Setting Everything Up]()<br>
+
+# Setting Everything Up
 
 ## Set up Conda Virtual Environment
 
