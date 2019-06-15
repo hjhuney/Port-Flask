@@ -4,7 +4,8 @@ Notes and work from Jose Portillo's Flask course.
 
 ## Table of Contents
 
-Section 1: [Setting Everything Up]()<br>
+Section 1: [Setting Everything Up](https://github.com/hjhuney/Port-Flask/blob/master/README.md#setting-everything-up)<br>
+Section 7: [Flask Basics]()<br>
 
 # Setting Everything Up
 
@@ -32,6 +33,12 @@ or in Anaconda prompt, you can just use:
 activate flaskenv
 ```
 
+If you are using Bash / Linux:
+
+```
+source activate flaskenv
+```
+
 ## Install All Flask Libraries Needed
 
 We should have a requirements.txt file with all the necessary libraries. To install all of them at once, we use:
@@ -39,3 +46,8 @@ We should have a requirements.txt file with all the necessary libraries. To inst
 ```
 pip install -r requirements.txt
 ```
+
+# Flask Basics
+
+## x
+
