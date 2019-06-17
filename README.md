@@ -152,8 +152,26 @@ And
 
 ## Control Flow
 
-For control flow (for loops, if statements), we use this syntax:
+For control flow (for loops, if statements), we use this syntax {% %}. For loops must be ended by tag of {% endfor %}. 
+
+For loop example below:
 
 ```
-{% for item in mylist %}
+<ul>
+  {% for item in mylist %}
+  <li>{{item}}</li>
+  {% endfor %}    
+</ul>
 ```
+
+If-else statement example below:
+
+```
+{% if 'Xerxes' in cats %}
+  <p>Found you Xerxes!</p>
+{% else %}
+  <p>Xerxes is not in this castle</p>
+{% endif %}
+```
+
+## Template Inheritance
