@@ -266,5 +266,18 @@ For linking to an image:
 
 First argument is directory (here we are getting an image from the "static" subfolder), second argument is file name. 
 
-## Template Forms
+## 404 Message
+
+In the app:
+
+```
+# 404 message
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+```
+
+We use .errorhandler instead of app.route. By contention, we use "e" for error as the argument in the function. 
+
+# Forms with Flask
 
