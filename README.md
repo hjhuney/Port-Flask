@@ -281,3 +281,12 @@ We use .errorhandler instead of app.route. By contention, we use "e" for error a
 
 # Forms with Flask
 
+## Form Basics
+
+* Configure a secret key for security
+* create a WTForm Class
+* Set up a view function
+* Add methods = ['GET, 'POST']
+* Create an instance of Form Class
+* Handle form submission
+
