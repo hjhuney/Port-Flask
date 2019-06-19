@@ -175,3 +175,109 @@ If-else statement example below:
 ```
 
 ## Template Inheritance
+
+Set up base html template file with reusable aspects of our site. Then we use {% extend "base.html" %} and {% block %} statements to extend these reusable aspects to other pages.
+
+We could use template inheritance by create a base html file (e.g. "base.html"), inserting something like this into the body of our code:
+
+```
+<body>
+
+              {% block content %}
+              
+              {% endblock %}    
+</body>
+</html>
+```
+
+And then creating a page that uses that template like this:
+
+```
+{% extends "base.html" %}
+
+{% block content%}
+<h1>This is the homepage!</h1>
+<h2>Go to /kitty/name </h2>
+
+{% endblock %}
+```
+
+Our app might look like this:
+
+```
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('home.html')
+
+
+@app.route('/kitty/<name>')
+def cat_name(name):
+    return render_template('cat.html', name=name)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+```
+
+
+## Filtering
+
+We can also use filters for variables which look like this:
+
+```
+{{ variable | filter ))
+```
+
+For example:
+
+```
+{{cat_name | capitalize}}
+```
+
+takes the variable cat_name and applies capitalization to it, so that "garfield" becomes "Garfield". 
+
+
+## URL Links with Templates
+
+Flask has a url_for() helper function that allows us to connect other template pages or files within our templates. 
+
+Example; code in our app:
+
+```
+@app.route('/')
+def index():
+    return render_template('home.html')
+```
+
+Code creating link in the html template file. 
+
+```
+<a class="navbar-brand" href="{{url_for('index')}}">Jerky Cats!</a>
+```
+
+For linking to an image:
+
+```
+<a href={{ url_for('static', filename='image_name.jpg')}}>Here</a>
+```
+
+First argument is directory (here we are getting an image from the "static" subfolder), second argument is file name. 
+
+## 404 Message
+
+In the app:
+
+```
+# 404 message
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+```
+
+We use .errorhandler instead of app.route. By contention, we use "e" for error as the argument in the function. 
+
+# Forms with Flask
+
