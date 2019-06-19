@@ -1,0 +1,11 @@
+{# KITTY HTML #}
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>This is the kitty page for: {{name|capitalize}}</h1>
+
+<a href={{ url_for('static', filename='higg001.jpg')}}>Here</a>
+
+
+{% endblock %}
